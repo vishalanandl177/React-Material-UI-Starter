@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Info
+
+The projects includes some packages: Material-UI, Axios, Redux.
+The projects by default uses scss.
+Add all the general methods to GeneralMethod class.
+In HttpClient.jsx, set "baseURL" to the API endpoint.
+
 ## Available Scripts
 
 In the project directory, you can run:
