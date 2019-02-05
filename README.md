@@ -2,10 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Info
 
-The projects includes some packages: Material-UI, Axios, Redux.
-The project by default uses scss.
-Add all the general methods to GeneralMethod class.
-In HttpClient.jsx, set "baseURL" to the API endpoint.
+The projects includes some packages: Material-UI, Axios, Redux.<br>
+The project by default uses scss.<br>
+Add all the general methods to GeneralMethod class.<br>
+In HttpClient.jsx, set "baseURL" to the API endpoint.<br>
 Enjoy coding.
 
 ## Available Scripts
