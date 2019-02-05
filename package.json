@@ -6,7 +6,9 @@
     "@babel/core": "7.1.6",
     "@material-ui/core": "^3.9.1",
     "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.9",
     "@svgr/webpack": "2.4.1",
+    "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
@@ -26,7 +28,6 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
-    "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
@@ -34,22 +35,29 @@
     "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
+    "material-ui": "^1.0.0-beta.47",
     "mini-css-extract-plugin": "0.4.3",
+    "next": "^7.0.2",
+    "nyc": "^13.1.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.3.1",
     "postcss-safe-parser": "4.0.1",
-    "react": "^16.7.0",
+    "react": "next",
     "react-app-polyfill": "^0.2.0",
     "react-dev-utils": "^7.0.1",
-    "react-dom": "^16.7.0",
+    "react-dom": "next",
+    "react-redux": "^6.0.0",
+    "react-router": "^4.3.1",
+    "react-router-config": "^4.4.0-beta.6",
     "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "resolve": "1.8.1",
     "style-loader": "0.23.0",
     "terser-webpack-plugin": "1.1.0",
-    "url-loader": "1.1.1",
     "webpack": "4.19.1",
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
@@ -116,7 +124,30 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-object-set-prototype-of-to-assign": "^7.2.0",
+    "file-loader": "^2.0.0",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
-  }
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.1"
+  },
+  "resolutions": {
+    "**/hoist-non-react-statics": "^3.2.1",
+    "react-jss/jss": "^10.0.0-alpha.3"
+  },
+  "sideEffects": false,
+  "nyc": {
+    "include": [
+      "src/packages/material-ui/src/**/*.js",
+      "src/packages/material-ui/utils/**/*.js",
+      "src/packages/material-ui/styles/**/*.js"
+    ],
+    "exclude": [
+      "**/*.test.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
